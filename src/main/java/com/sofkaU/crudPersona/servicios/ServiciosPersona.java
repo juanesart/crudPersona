@@ -34,6 +34,7 @@ public class ServiciosPersona implements InterfaceServiciosPersona{
 
     @Override
     public Persona actualizar(Persona persona) {
-        return null;
+        this.listarId(persona.getId());
+        return data.save(persona);
     }
 }
