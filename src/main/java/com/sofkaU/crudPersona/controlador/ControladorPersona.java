@@ -21,4 +21,9 @@ public class ControladorPersona {
     public Persona guardarPersonas(@RequestBody Persona persona){
         return servicio.guardar(persona);
     }
+
+    @GetMapping(value = "/listarPorId/{id}")
+    public Persona listarPorId(@PathVariable Integer id){
+        return servicio.listarId(id);
+    }
 }

@@ -18,8 +18,8 @@ public class ServiciosPersona implements InterfaceServiciosPersona{
     }
 
     @Override
-    public Persona listarId(int id) {
-        return null;
+    public Persona listarId(Integer id) {
+        return data.findById(id).orElseThrow();
     }
 
     @Override
