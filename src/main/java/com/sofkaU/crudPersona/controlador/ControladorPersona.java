@@ -26,4 +26,9 @@ public class ControladorPersona {
     public Persona listarPorId(@PathVariable Integer id){
         return servicio.listarId(id);
     }
+
+    @DeleteMapping(value = "/borrarPorId/{id}")
+    public void borrarPorId(@PathVariable int id){
+        servicio.borrar(id);
+    }
 }
